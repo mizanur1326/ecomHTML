@@ -22,9 +22,12 @@
 
     @media (max-width: 1024px) {
       #sidebar {
-        height: calc(100vh - 130px); /* Full viewport height minus the top offset */
-        top: 130px; /* Ensure it starts from 145px from the top */
-        right: 0; /* Align to the right */
+        height: calc(100vh - 130px);
+        /* Full viewport height minus the top offset */
+        top: 130px;
+        /* Ensure it starts from 145px from the top */
+        right: 0;
+        /* Align to the right */
       }
     }
   </style>
@@ -301,7 +304,7 @@
         </aside>
 
         <!-- Products Grid -->
-        <div class="w-3/4 ml-6">
+        <div class="w-3/4 mx-auto lg:ml-6">
           <div class="flex gap-3 lg:justify-between">
             <div>
               <h2 class="text-xl lg:text-2xl font-semibold mb-4">Casual</h2>
@@ -324,7 +327,7 @@
               </button>
             </div>
           </div>
-          <div class="grid grid-cols-3 gap-6">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Product Card -->
             <div class="card-container">
               <div class="card bg-[#F0EEED] shadow-xl h-40 lg:h-80 flex items-center justify-center">
@@ -544,31 +547,28 @@
           </div>
 
           <!-- Pagination -->
-          <div class="flex justify-between items-center mt-6">
+          <div class="flex justify-between items-center mt-6 w-full mx-auto">
             <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
               Previous
             </button>
-            <div class="space-x-2">
-              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
-                1
-              </button>
-              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
-                2
-              </button>
-              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
-                3
-              </button>
-              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
-                ...
-              </button>
-              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
-                10
-              </button>
+            <div class="hidden sm:flex space-x-2">
+              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">1</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">2</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">3</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">...</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">10</button>
+            </div>
+            <div class="flex sm:hidden space-x-2">
+              <button class="bg-gray-200 text-gray-700 py-2 px-2 rounded-lg">1</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-2 rounded-lg">2</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-2 rounded-lg">...</button>
+              <button class="bg-gray-200 text-gray-700 py-2 px-2 rounded-lg">10</button>
             </div>
             <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg">
               Next
             </button>
           </div>
+
         </div>
       </div>
     </div>
