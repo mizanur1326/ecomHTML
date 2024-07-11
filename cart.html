@@ -14,6 +14,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alata&family=Satisfy&display=swap"
         rel="stylesheet" />
+        <style>
+            .quantity-selector {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #f0f0f0;
+                padding: 0.5rem 1rem;
+                border-radius: 9999px;
+                width: 120px;
+            }
+            .quantity-button {
+                cursor: pointer;
+            }
+            .quantity-input {
+                text-align: center;
+                width: 30px;
+                background: none;
+                border: none;
+                outline: none;
+            }
+        </style>
     <title>Cart Page</title>
 </head>
 
@@ -131,7 +152,7 @@
         <!-- Cart -->
         <div class="mt-6">
             <h1 class="text-xl lg:text-2xl font-extrabold px-20 text-black">YOUR CART</h1>
-            <div class="row lg:grid lg:grid-cols-2 px-20 gap-10 lg:px-20 my-4 lg:mb-48">
+            <div class="row lg:grid lg:grid-cols-2 px-20 gap-10 lg:px-20 my-4 lg:mb-48 border-sky-500 border-2">
                 <!-- Product info div -->
                 <div class="border-2 border-red-700 p-5">
                     <div class="flex flex-row gap-5">
@@ -139,26 +160,115 @@
                         <div class="bg-[#F0EEED] p-2 mb-4 lg:w-32 lg:h-32 rounded-xl grid">
                             <img src="assets/images/cart/1.png" class="h-28 lg:h-28 lg:w-40" alt="">
                         </div>
-                        <!-- Product Name & delete button -->
-                        <div class="flex justify-between w-full">
-                            <div class="flex-grow">
-                                <a href="#">Gradient Graphic T-shirt</a>
+                        <div class="w-full">
+                            <!-- Product Name & delete button -->
+                            <div class="flex justify-between">
+                                <div>
+                                    <a href="#">Gradient Graphic T-shirt</a>
+                                </div>
+                                <div>
+                                    <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                                </div>
                             </div>
-                            <div>
-                                <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                            <div class="mt-2">
+                                <p class="text-xs">Size : XXL</p>
+                                <p class="text-xs">Color : White</p>
+                            </div>
+    
+                            <div class="flex justify-between mt-5">
+                                <div class="">
+                                    <p class="text-xl">$240</p>
+                                </div>
+                                <div class="flex items-center justify-center bg-gray-100 rounded-2xl">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-button text-lg" onclick="decreaseQuantity()">-</button>
+                                        <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                                        <button class="quantity-button text-lg" onclick="increaseQuantity()">+</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                    <hr>
+                    <div class="flex flex-row gap-5 mt-4">
+                        <!-- Product image -->
+                        <div class="bg-[#F0EEED] p-2 mb-4 lg:w-32 lg:h-32 rounded-xl grid">
+                            <img src="assets/images/cart/1.png" class="h-28 lg:h-28 lg:w-40" alt="">
+                        </div>
+                        <div class="w-full">
+                            <!-- Product Name & delete button -->
+                            <div class="flex justify-between">
+                                <div>
+                                    <a href="#">Gradient Graphic T-shirt</a>
+                                </div>
+                                <div>
+                                    <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <p class="text-xs">Size : XXL</p>
+                                <p class="text-xs">Color : White</p>
+                            </div>
+    
+                            <div class="flex justify-between mt-5">
+                                <div class="">
+                                    <p class="text-xl">$240</p>
+                                </div>
+                                <div class="flex items-center justify-center bg-gray-100 rounded-2xl">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-button text-lg" onclick="decreaseQuantity()">-</button>
+                                        <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                                        <button class="quantity-button text-lg" onclick="increaseQuantity()">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row gap-5 mt-4">
+                        <!-- Product image -->
+                        <div class="bg-[#F0EEED] p-2 mb-4 lg:w-32 lg:h-32 rounded-xl grid">
+                            <img src="assets/images/cart/1.png" class="h-28 lg:h-28 lg:w-40" alt="">
+                        </div>
+                        <div class="w-full">
+                            <!-- Product Name & delete button -->
+                            <div class="flex justify-between">
+                                <div>
+                                    <a href="#">Gradient Graphic T-shirt</a>
+                                </div>
+                                <div>
+                                    <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <p class="text-xs">Size : XXL</p>
+                                <p class="text-xs">Color : White</p>
+                            </div>
+    
+                            <div class="flex justify-between mt-5">
+                                <div class="">
+                                    <p class="text-xl">$240</p>
+                                </div>
+                                <div class="flex items-center justify-center bg-gray-100 rounded-2xl">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-button text-lg" onclick="decreaseQuantity()">-</button>
+                                        <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                                        <button class="quantity-button text-lg" onclick="increaseQuantity()">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-
-
-
+    
+    
+    
                 <!-- Product price summary div -->
                 <div class="border-2 border-green-700 p-5">
                     Order summary
                 </div>
-
+    
             </div>
         </div>
 
@@ -255,5 +365,21 @@
     </main>
 
 </body>
+
+<script>
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        var quantity = parseInt(quantityInput.value);
+        if (quantity > 1) {
+            quantityInput.value = quantity - 1;
+        }
+    }
+
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        var quantity = parseInt(quantityInput.value);
+        quantityInput.value = quantity + 1;
+    }
+</script>
 
 </html>
