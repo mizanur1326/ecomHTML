@@ -14,27 +14,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alata&family=Satisfy&display=swap"
         rel="stylesheet" />
-        <style>
-            .quantity-selector {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: #f0f0f0;
-                padding: 0.5rem 1rem;
-                border-radius: 9999px;
-                width: 120px;
-            }
-            .quantity-button {
-                cursor: pointer;
-            }
-            .quantity-input {
-                text-align: center;
-                width: 30px;
-                background: none;
-                border: none;
-                outline: none;
-            }
-        </style>
+    <style>
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            width: 120px;
+        }
+
+        .quantity-button {
+            cursor: pointer;
+        }
+
+        .quantity-input {
+            text-align: center;
+            width: 30px;
+            background: none;
+            border: none;
+            outline: none;
+        }
+    </style>
     <title>Cart Page</title>
 </head>
 
@@ -152,9 +154,9 @@
         <!-- Cart -->
         <div class="mt-6">
             <h1 class="text-xl lg:text-2xl font-extrabold px-20 text-black">YOUR CART</h1>
-            <div class="row lg:grid lg:grid-cols-2 px-20 gap-10 lg:px-20 my-4 lg:mb-48 border-sky-500 border-2">
+            <div class="row lg:grid lg:grid-cols-2 px-20 gap-5 lg:px-20 my-4 lg:mb-48">
                 <!-- Product info div -->
-                <div class="border-2 border-red-700 p-5">
+                <div class="border-2 border-gray-200 rounded-2xl p-5">
                     <div class="flex flex-row gap-5">
                         <!-- Product image -->
                         <div class="bg-[#F0EEED] p-2 mb-4 lg:w-32 lg:h-32 rounded-xl grid">
@@ -167,14 +169,15 @@
                                     <a href="#">Gradient Graphic T-shirt</a>
                                 </div>
                                 <div>
-                                    <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                                    <button type="reset"><i class="fa-solid fa-trash"
+                                            style="color: #ff0000;"></i></button>
                                 </div>
                             </div>
                             <div class="mt-2">
                                 <p class="text-xs">Size : XXL</p>
                                 <p class="text-xs">Color : White</p>
                             </div>
-    
+
                             <div class="flex justify-between mt-5">
                                 <div class="">
                                     <p class="text-xl">$240</p>
@@ -189,8 +192,10 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="flex flex-row gap-5 mt-4">
+
+                    <hr class="my-3">
+
+                    <div class="flex flex-row gap-5">
                         <!-- Product image -->
                         <div class="bg-[#F0EEED] p-2 mb-4 lg:w-32 lg:h-32 rounded-xl grid">
                             <img src="assets/images/cart/1.png" class="h-28 lg:h-28 lg:w-40" alt="">
@@ -202,14 +207,15 @@
                                     <a href="#">Gradient Graphic T-shirt</a>
                                 </div>
                                 <div>
-                                    <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                                    <button type="reset"><i class="fa-solid fa-trash"
+                                            style="color: #ff0000;"></i></button>
                                 </div>
                             </div>
                             <div class="mt-2">
                                 <p class="text-xs">Size : XXL</p>
                                 <p class="text-xs">Color : White</p>
                             </div>
-    
+
                             <div class="flex justify-between mt-5">
                                 <div class="">
                                     <p class="text-xl">$240</p>
@@ -224,8 +230,10 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="flex flex-row gap-5 mt-4">
+
+                    <hr class="my-3">
+
+                    <div class="flex flex-row gap-5">
                         <!-- Product image -->
                         <div class="bg-[#F0EEED] p-2 mb-4 lg:w-32 lg:h-32 rounded-xl grid">
                             <img src="assets/images/cart/1.png" class="h-28 lg:h-28 lg:w-40" alt="">
@@ -237,14 +245,15 @@
                                     <a href="#">Gradient Graphic T-shirt</a>
                                 </div>
                                 <div>
-                                    <button type="reset"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
+                                    <button type="reset"><i class="fa-solid fa-trash"
+                                            style="color: #ff0000;"></i></button>
                                 </div>
                             </div>
                             <div class="mt-2">
                                 <p class="text-xs">Size : XXL</p>
                                 <p class="text-xs">Color : White</p>
                             </div>
-    
+
                             <div class="flex justify-between mt-5">
                                 <div class="">
                                     <p class="text-xl">$240</p>
@@ -259,16 +268,57 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
-    
-    
-    
+
+
+
                 <!-- Product price summary div -->
-                <div class="border-2 border-green-700 p-5">
-                    Order summary
+                <div class="border-2 border-gray-200 rounded-2xl p-5">
+                    <h1 class="text-xs lg:text-xl font-extrabold text-black mb-5">Order summary</h1>
+                    <div>
+                        <div class="flex justify-between px-5 mb-3">
+                            <p>Subtotal</p>
+                            <p>$565</p>
+                        </div>
+
+                        <div class="flex justify-between px-5 mb-3">
+                            <p>Discount (-20%)</p>
+                            <p class="text-red-500">-$113</p>
+                        </div>
+
+                        <div class="flex justify-between px-5">
+                            <p>Delivery Fee</p>
+                            <p>$15</p>
+                        </div>
+                        <hr class="my-3">
+
+                        <div class="flex justify-between px-5 mb-7">
+                            <p class="font-extrabold">Total</p>
+                            <p class="font-extrabold">$467</p>
+                        </div>
+
+
+                        <div>
+                            <form class="w-full flex gap-3 mb-4">
+                                <input type="text" placeholder="Add Promo Code"
+                                    class="bg-gray-200  text-xs p-2 rounded-full text-gray-600 w-9/12">
+                                <button class="bg-gray-900 text-white p-2 rounded-full text-xs flex-grow">Apply</button>
+                            </form>
+                            <!-- Go to Checkout Button -->
+                            <button class="bg-black text-white px-6 py-2 rounded-full flex items-center w-full flex justify-center">
+                                <span>Go to Checkout</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
-    
+
             </div>
         </div>
 
